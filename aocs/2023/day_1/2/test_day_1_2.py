@@ -1,5 +1,5 @@
 import pytest
-from day_2 import (
+from day_1_2 import (
     calibrator,
     _two_or_one_digits,
     _pick_right_type,
@@ -32,13 +32,13 @@ from day_2 import (
         ("seven", 77),
         ("eight", 88),
         ("nine", 99),
-        ("tbsxkhhv6twozrtczg6seven",67),
-        ("ccpeightbcvknglvcv81gcjnlnfnine9",89),
-        ("4twoscpht",42),
-        ("qdgdrtx9onefourdcvctldjnpcdjbc",94),
-        ("cjxkxsgmql4xxgjtpdcbmsixeight",48),
-        ("739",79),
-        ("twoone1threezdpmqthxf17oneightcj",28)
+        ("tbsxkhhv6twozrtczg6seven", 67),
+        ("ccpeightbcvknglvcv81gcjnlnfnine9", 89),
+        ("4twoscpht", 42),
+        ("qdgdrtx9onefourdcvctldjnpcdjbc", 94),
+        ("cjxkxsgmql4xxgjtpdcbmsixeight", 48),
+        ("739", 79),
+        ("twoone1threezdpmqthxf17oneightcj", 28),
     ],
 )
 def test__two_or_more_digits(_input, expected):

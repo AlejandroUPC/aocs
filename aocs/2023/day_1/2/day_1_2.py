@@ -28,10 +28,13 @@ def _two_or_one_digits(
     line: str,
 ) -> int:
     matches = regex.findall(
-        rf"\d{{1}}|{'|'.join(list(STRING_TO_DIGIT_STRING_DICT.keys()))}", line,overlapped=True)
-   # matches_reverse_string = re.findall(rf"\d{{1}}|{'|'.join([x[::-1] for x in STRING_TO_DIGIT_STRING_DICT.keys()])}",line[::-1])
-   # if matches and matches_reverse_string and matches[0]!=matches_reverse_string[0][::-1]:
-     #   matches.append(matches_reverse_string[0][::-1])
+        rf"\d{{1}}|{'|'.join(list(STRING_TO_DIGIT_STRING_DICT.keys()))}",
+        line,
+        overlapped=True,
+    )
+    # matches_reverse_string = re.findall(rf"\d{{1}}|{'|'.join([x[::-1] for x in STRING_TO_DIGIT_STRING_DICT.keys()])}",line[::-1])
+    # if matches and matches_reverse_string and matches[0]!=matches_reverse_string[0][::-1]:
+    #   matches.append(matches_reverse_string[0][::-1])
     try:
         return int(_pick_right_type(matches[0], matches[-1]))
     except IndexError:

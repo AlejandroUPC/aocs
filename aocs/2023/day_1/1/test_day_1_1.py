@@ -1,5 +1,5 @@
 import pytest
-from day_1 import calibrator, _two_or_one_digits
+from day_1_1 import calibrator, _two_or_one_digits
 
 
 @pytest.mark.parametrize(
