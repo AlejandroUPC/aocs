@@ -38,6 +38,7 @@ from day_2 import (
         ("qdgdrtx9onefourdcvctldjnpcdjbc",94),
         ("cjxkxsgmql4xxgjtpdcbmsixeight",48),
         ("739",79),
+        ("twoone1threezdpmqthxf17oneightcj",28)
     ],
 )
 def test__two_or_more_digits(_input, expected):
