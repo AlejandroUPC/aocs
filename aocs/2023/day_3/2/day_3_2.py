@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from collections import defaultdict
 from functools import reduce
 
+
 @dataclass
 class Part:
     y: int
@@ -56,7 +57,7 @@ class Map:
         boundaries = boundaries._sanitize_surroundings(
             (len(self._map[0]), len(self._map) - 1)
         )
-        return [(part.value,x,y) for x, y in boundaries  if self._map[y][x] == "*" ]
+        return [(part.value, x, y) for x, y in boundaries if self._map[y][x] == "*"]
 
 
 def compute_valid_sum(
@@ -77,10 +78,12 @@ def compute_valid_sum(
             for match in re.finditer("(\d+)", part)
         ]
         for p in parts:
-            for val,x,y  in m.is_asterisk_surrounded(p):
-                asterisk_map[(x,y)].append(val)
-        
-    return sum([reduce(lambda x, y: x*y, v) for v in  asterisk_map.values() if len(v) > 1])
+            for val, x, y in m.is_asterisk_surrounded(p):
+                asterisk_map[(x, y)].append(val)
+
+    return sum(
+        [reduce(lambda x, y: x * y, v) for v in asterisk_map.values() if len(v) > 1]
+    )
 
 
 def main() -> None:
