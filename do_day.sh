@@ -8,6 +8,6 @@ for i in 1 2
 do
     BASE_PATH="aocs/$YEAR"
     mkdir -p $BASE_PATH/day_$DAY/$i/
-    touch $BASE_PATH/day_$DAY/$i/day_$DAY.py
-    touch $BASE_PATH/day_$DAY/$i/test_day_$DAY.py
+    touch $BASE_PATH/day_$DAY/$i/day_$DAY"_"$i.py
+    touch $BASE_PATH/day_$DAY/$i/test_day_$DAY"_"$i.py
 done
